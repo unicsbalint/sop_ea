@@ -1,0 +1,12 @@
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\bin\Debug\Client.exe.config
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\bin\Debug\Client.exe
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\bin\Debug\Client.pdb
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\obj\Debug\Client.csprojAssemblyReference.cache
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\obj\Debug\Client.exe
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\obj\Debug\Client.pdb
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\obj\Debug\Client.loginForm.resources
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\obj\Debug\Client.Main.resources
+C:\Users\Balint\Desktop\SZOP_wcf\Client\Client\obj\Debug\Client.regForm.resources

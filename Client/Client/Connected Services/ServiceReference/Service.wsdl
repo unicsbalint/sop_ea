@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1111/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1111/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1111/Service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IService_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_getUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService_getUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_getCars_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCars" />
+  </wsdl:message>
+  <wsdl:message name="IService_getCars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_getBorrows_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBorrows" />
+  </wsdl:message>
+  <wsdl:message name="IService_getBorrows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBorrowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_addCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCar" />
+  </wsdl:message>
+  <wsdl:message name="IService_addCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_modifyCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyCar" />
+  </wsdl:message>
+  <wsdl:message name="IService_modifyCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_deleteCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCar" />
+  </wsdl:message>
+  <wsdl:message name="IService_deleteCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_loggedUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:loggedUser" />
+  </wsdl:message>
+  <wsdl:message name="IService_loggedUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loggedUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IService_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_getUserCars_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserCars" />
+  </wsdl:message>
+  <wsdl:message name="IService_getUserCars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserCarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_borrowCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:borrowCar" />
+  </wsdl:message>
+  <wsdl:message name="IService_borrowCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:borrowCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_giveBackCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:giveBackCar" />
+  </wsdl:message>
+  <wsdl:message name="IService_giveBackCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:giveBackCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_userPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:userPayment" />
+  </wsdl:message>
+  <wsdl:message name="IService_userPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:userPaymentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Login" message="tns:IService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/LoginResponse" message="tns:IService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Register" message="tns:IService_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegisterResponse" message="tns:IService_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/getUsers" message="tns:IService_getUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/getUsersResponse" message="tns:IService_getUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCars">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/getCars" message="tns:IService_getCars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/getCarsResponse" message="tns:IService_getCars_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBorrows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/getBorrows" message="tns:IService_getBorrows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/getBorrowsResponse" message="tns:IService_getBorrows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/addCar" message="tns:IService_addCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/addCarResponse" message="tns:IService_addCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/modifyCar" message="tns:IService_modifyCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/modifyCarResponse" message="tns:IService_modifyCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/deleteCar" message="tns:IService_deleteCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/deleteCarResponse" message="tns:IService_deleteCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loggedUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/loggedUser" message="tns:IService_loggedUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/loggedUserResponse" message="tns:IService_loggedUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Logout" message="tns:IService_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/LogoutResponse" message="tns:IService_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserCars">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/getUserCars" message="tns:IService_getUserCars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/getUserCarsResponse" message="tns:IService_getUserCars_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="borrowCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/borrowCar" message="tns:IService_borrowCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/borrowCarResponse" message="tns:IService_borrowCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="giveBackCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/giveBackCar" message="tns:IService_giveBackCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/giveBackCarResponse" message="tns:IService_giveBackCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="userPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/userPayment" message="tns:IService_userPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/userPaymentResponse" message="tns:IService_userPayment_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IService/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <soap:operation soapAction="http://tempuri.org/IService/getUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCars">
+      <soap:operation soapAction="http://tempuri.org/IService/getCars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBorrows">
+      <soap:operation soapAction="http://tempuri.org/IService/getBorrows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCar">
+      <soap:operation soapAction="http://tempuri.org/IService/addCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyCar">
+      <soap:operation soapAction="http://tempuri.org/IService/modifyCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCar">
+      <soap:operation soapAction="http://tempuri.org/IService/deleteCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loggedUser">
+      <soap:operation soapAction="http://tempuri.org/IService/loggedUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://tempuri.org/IService/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserCars">
+      <soap:operation soapAction="http://tempuri.org/IService/getUserCars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="borrowCar">
+      <soap:operation soapAction="http://tempuri.org/IService/borrowCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="giveBackCar">
+      <soap:operation soapAction="http://tempuri.org/IService/giveBackCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userPayment">
+      <soap:operation soapAction="http://tempuri.org/IService/userPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost:1111/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
